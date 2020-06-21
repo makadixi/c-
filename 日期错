@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+   int month [12]{31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+   int M;
+   scanf("%d", &M);
+   int D;
+   scanf("%d", &D);
+   int sum = 0;
+   for (int i = 4; i < M; i++){
+    sum+= month[i -1];
+   }
+   sum = sum + D;
+   switch ((sum - 12)%7)
+   {
+       case 0:printf("Thurstay");break;
+         case 1:printf("Friday");break;
+         case 2:printf("Saturday");break;
+         case 3:printf("Sunday");break;
+         case 4:printf("Monday");break;
+         case 5:printf("Tuesday");break;
+         case 6:printf("Wednesday");break;
+   }
+
+    return 0;
+
+}
