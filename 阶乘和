@@ -1,0 +1,20 @@
+#include <stdio.h>
+long int jie(int x)
+{
+    if (x == 0) return 1;
+    return x * jie(x - 1);
+}
+
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+ long int Sn = 0;
+ for (int i = 1; i <= n ;i++){
+    Sn+= jie(i);
+ }
+ printf("%ld\n", Sn);
+    return 0;
+
+}
